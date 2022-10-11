@@ -1,0 +1,25 @@
+Create your own store! Your store should sell one type of things, like clothing or bikes, whatever you want your store to specialize in.
+You should have a table for all the items in your store, and at least 5 columns for the kind of data you think you'd need to store. You should sell at least 15 items,
+and use select statements to order your items by price and show at least one statistic about the items.
+
+create table Clothing(id integer primary key, name text, price integer , quantity integer , aisle integer );
+
+insert into clothing values (1 , "Shirt" , 200 , 300 , 1);
+insert into clothing values (2 , "pants" , 350 , 200 , 2);
+insert into clothing values (3 , "t-shirt" , 250 , 150,1);
+insert into clothing values (4 , "blouse" , 100,220 , 4);
+insert into clothing values (5 , "skirt" , 260 , 100 , 4);
+insert into clothing values (6 , "jacket" , 500 , 50 , 3);
+insert into clothing values (7 , "coat" , 600 , 20 , 5);
+insert into clothing values (8 , "shorts" , 320 ,200 , 2);
+insert into clothing values (9 , "pajamas" , 245,150 , 8);
+insert into clothing values (10 ,"raincoat", 600 ,30 , 5);
+insert into clothing values (11, "dress" , 450 , 300 , 4);
+insert into clothing values (12, "suit" , 1000 , 100, 6);
+insert into clothing values (13, "tie" , 100 , 250 , 6);
+insert into clothing values (14, "belt" , 150 , 300 , 7);
+insert into clothing values (15, "Shoes" , 400 , 200 ,7);
+
+select * from clothing;
+select * from clothing order by aisle ;
+select aisle ,sum(quantity)  from clothing group by aisle;
